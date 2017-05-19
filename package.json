@@ -1,7 +1,7 @@
 {
-  "name": "my-react-app",
+  "name": "form-generator",
   "version": "1.0.0",
-  "description": "My React App",
+  "description": "it simplifies the way of generating forms using formsy-react",
   "main": "",
   "author": "CodeBrahma",
   "repository": {
