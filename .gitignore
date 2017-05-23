@@ -9,6 +9,7 @@ pids
 
 # auto-generated stuff
 coverage
+build
 node_modules
 stats.json
 
