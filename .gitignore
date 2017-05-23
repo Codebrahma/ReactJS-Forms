@@ -10,6 +10,7 @@ pids
 # auto-generated stuff
 coverage
 node_modules
+build
 stats.json
 
 # Cruft
