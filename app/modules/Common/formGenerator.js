@@ -1,6 +1,6 @@
 import Form from './components/form.js';
 
-export default class FormGenerator {
+class FormGenerator {
 	constructor() {
 		this.form = this.form.bind(this);
 		this.use = this.use.bind(this);
@@ -14,3 +14,4 @@ export default class FormGenerator {
 	}
 }
 
+module.exports = FormGenerator;
