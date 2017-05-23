@@ -5,18 +5,7 @@ import { SubmitButton } from './formsyComponents/index.js';
 
 const Form = (componentPayload) => {
 	return class FormWithSubmitButton extends Component {
-		static propTypes = {
-		  data: PropTypes.array.isRequired,
-		  handleOnSubmit: PropTypes.func.isRequired,
-		  submitButtonValue: PropTypes.string,
-		  submitButtonName: PropTypes.string
-	  };
-
-	  static defaultProps = {
-		  submitButtonValue: "submit",
-		  submitButtonName: "Submit"
-	  };
-
+		
 		constructor(props){
 			super(props);
 			this.state = {
