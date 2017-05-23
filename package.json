@@ -2,7 +2,7 @@
   "name": "form-generator",
   "version": "1.0.0",
   "description": "it simplifies the way of generating forms using formsy-react",
-  "main": "bundle.js",
+  "main": "build/main.js",
   "author": "CodeBrahma",
   "repository": {
     "type": "git",
