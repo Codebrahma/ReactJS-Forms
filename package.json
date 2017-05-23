@@ -2,7 +2,7 @@
   "name": "form-generator",
   "version": "1.0.0",
   "description": "it simplifies the way of generating forms using formsy-react",
-  "main": "app/main.js",
+  "main": "./dist/main.js",
   "author": "CodeBrahma",
   "repository": {
     "type": "git",
@@ -21,7 +21,8 @@
     "lint:eslint": "eslint --ignore-path .gitignore",
     "lint:js": "npm run lint:eslint -- . ",
     "lint:css": "stylelint './app/**/**/*.scss'",
-    "lint:staged": "lint-staged"
+    "lint:staged": "lint-staged",
+    "prepublish": "babel ./app/ --out-dir ./dist/ --source-maps --presets es2015,react --plugins babel-plugin-add-module-exports"
   },
   "dependencies": {
     "chalk": "1.1.3",
@@ -56,6 +57,7 @@
     "babel-core": "6.11.4",
     "babel-eslint": "6.1.2",
     "babel-loader": "6.2.4",
+    "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-react-intl": "^2.1.3",
     "babel-plugin-react-transform": "2.0.2",
     "babel-plugin-transform-react-constant-elements": "6.9.1",
