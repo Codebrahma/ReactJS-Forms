@@ -1,6 +1,6 @@
 {
   "name": "create-forms",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "it simplifies the way of generating forms using formsy-react",
   "main": "src/formGenerator",
   "author": "CodeBrahma",
