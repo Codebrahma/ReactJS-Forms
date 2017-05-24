@@ -1,4 +1,4 @@
-import Form from './components/form.js';
+import Form from './form.js';
 
 class FormGenerator {
 	constructor() {

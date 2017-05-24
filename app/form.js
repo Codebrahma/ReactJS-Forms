@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import Formsy from 'formsy-react';
 import _ from 'lodash';
-import { SubmitButton } from './formsyComponents/index.js';
 
 const Form = (componentPayload) => {
 	return class FormWithSubmitButton extends Component {
@@ -18,6 +17,7 @@ const Form = (componentPayload) => {
 
 	  generateInputComponents(){
 			let formInputs = _.map(this.props.data, (input, index) => {
+				if (input.type === 'submit') return null;
 				const component = componentPayload[input.type];
 				return (<component.type key={index} {...input} />);
 			});
@@ -39,7 +39,9 @@ const Form = (componentPayload) => {
 	    };
 	  };
 
-	  render(){ 
+	  render(){
+	  	const Submit = componentPayload['submit'];
+
 	  	return(
 	      <div>
 	        <Formsy.Form
@@ -52,7 +54,7 @@ const Form = (componentPayload) => {
   		      	{this.generateInputComponents()}
 	          </div>
 
-	          <SubmitButton
+	          <Submit.type
 	            name={this.props.submitButtonName}
 	            value={this.props.submitButtonValue}
 	            disabled={!this.state.canSubmit}
