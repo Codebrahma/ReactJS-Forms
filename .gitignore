@@ -13,6 +13,7 @@ build
 node_modules
 build
 stats.json
+src
 
 # Cruft
 .DS_Store
