@@ -41,6 +41,10 @@ const Form = (componentPayload) => {
 
 	  render(){
 	  	const Submit = componentPayload['submit'];
+      
+	  	const submitData = _.find(this.props.data, (obj) => {
+	  		return obj.type === 'submit';
+	  	})
 
 	  	return(
 	      <div>
@@ -55,9 +59,8 @@ const Form = (componentPayload) => {
 	          </div>
 
 	          <Submit.type
-	            name={this.props.submitButtonName}
-	            value={this.props.submitButtonValue}
 	            disabled={!this.state.canSubmit}
+	            {...submitData}
 	          />
 	        </Formsy.Form>        
 	      </div>
