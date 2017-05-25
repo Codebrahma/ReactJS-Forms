@@ -99,6 +99,7 @@ var Form = function Form(componentPayload) {
 							null,
 							this.generateInputComponents()
 						),
+            
 						_react2.default.createElement(Submit.type, _extends({
 							disabled: !this.state.canSubmit
 						}, submitData))

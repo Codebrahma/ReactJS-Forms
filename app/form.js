@@ -41,6 +41,7 @@ const Form = (componentPayload) => {
 
 	  render(){
 	  	const Submit = componentPayload['submit'];
+      
 	  	const submitData = _.find(this.props.data, (obj) => {
 	  		return obj.type === 'submit';
 	  	})
