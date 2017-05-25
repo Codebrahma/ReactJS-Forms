@@ -79,6 +79,9 @@ var Form = function Form(componentPayload) {
 			key: 'render',
 			value: function render() {
 				var Submit = componentPayload['submit'];
+				var submitData = _lodash2.default.find(this.props.data, function (obj) {
+					return obj.type === 'submit';
+				});
 
 				return _react2.default.createElement(
 					'div',
@@ -96,11 +99,9 @@ var Form = function Form(componentPayload) {
 							null,
 							this.generateInputComponents()
 						),
-						_react2.default.createElement(Submit.type, {
-							name: this.props.submitButtonName,
-							value: this.props.submitButtonValue,
+						_react2.default.createElement(Submit.type, _extends({
 							disabled: !this.state.canSubmit
-						})
+						}, submitData))
 					)
 				);
 			}
